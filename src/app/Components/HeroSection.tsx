@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-blue-200 mb-12 ">
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-blue-200 dark:bg-blue-900 mb-12 ">
         <Image
           src="/images/heroi.jpg"
           alt="Hero Background"

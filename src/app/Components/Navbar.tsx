@@ -85,7 +85,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-white backdrop-blur-md">
+    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md">
       <div className="container mx-auto flex h-16 items-center justify-between gap-4 px-4  max-w-7xl ">
         <a href="/" className="flex items-center gap-2 font-bold text-xl text-blue-600 text-primary shrink-0">
           <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground text-sm font-black"></div>
