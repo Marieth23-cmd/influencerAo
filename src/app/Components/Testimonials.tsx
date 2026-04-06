@@ -6,9 +6,9 @@ const Testimonials = () => {
  
 
   const testimonials = [
-    { name: "TechStart Inc.", role: "CEO", text: "A InfluConnect nos ajudou a encontrar os influenciadores perfeitos para o lançamento do nosso produto. Nosso alcance cresceu 300% em apenas dois meses.", img: "/images/testimonial1.jpg" },
-    { name: "FashionHub", role: "Diretora de Marketing", text: "A plataforma é incrivelmente intuitiva. Já realizamos 15 campanhas bem-sucedidas com influenciadores que encontramos aqui.", rating: 5, img: "/images/testimonial2.jpg" },
-    { name: "GreenLife Co.", role: "Gerente de Marca", text: "A conexão direta com influenciadores sem intermediários economizou nosso tempo e orçamento. Altamente recomendado!", img: "/images/testimonial3.jpg" },
+    { name: "TechStart Inc.", role: "CEO", text: "A InfluConnect nos ajudou a encontrar os influenciadores perfeitos para o lançamento do nosso produto. Nosso alcance cresceu 300% em apenas dois meses.", img: "/images/influencer-1.jpg" },
+    { name: "FashionHub", role: "Diretora de Marketing", text: "A plataforma é incrivelmente intuitiva. Já realizamos 15 campanhas bem-sucedidas com influenciadores que encontramos aqui.", rating: 5, img: "/images/influencer-2.jpg" },
+    { name: "GreenLife Co.", role: "Gerente de Marca", text: "A conexão direta com influenciadores sem intermediários economizou nosso tempo e orçamento. Altamente recomendado!", img: "/images/influencer-3.jpg" },
   ];
 
   return (

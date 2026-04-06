@@ -11,13 +11,13 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="py-24 bg-muted/30 relative overflow-hidden">
+    <section className="py-8 lg:py-14 bg-muted/30 relative overflow-hidden max-w-7xl mx-auto px-4">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,hsl(var(--primary)/0.05),transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,hsl(var(--accent)/0.05),transparent_50%)]" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-14 animate-on-scroll">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground">Por Que Escolher a InfluConnect</h2>
+          <h2 className="text-2xl md:text-4xl font-bold text-foreground">Por Que Escolher a InfluConnect</h2>
           <p className="text-muted-foreground mt-3 text-lg">Construída para marketing orientado a resultados</p>
         </div>
 

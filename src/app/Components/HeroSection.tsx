@@ -34,11 +34,13 @@ const HeroSection = () => {
                   <span className="  from-blue-600 via-purple-700 to-blue-700"> resultados reais</span>
                </h1>
                 
-            <p className="text-white text-lg md:text-xl text-primary-foreground/70 max-w-7xl animate-in fade-in slide-in-from-bottom-4 duration-700" style={{ animationDelay: "200ms" }}>
+            <p className="text-white text-lg md:text-xl text-primary-foreground/70 max-w-7xl font-medium animate-in fade-in slide-in-from-bottom-4 duration-700"
+             style={{ animationDelay: "200ms" }}>
               Encontre criadores por nicho, analise desempenho e execute campanhas de impacto
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2 animate-in fade-in slide-in-from-bottom-4 duration-700" style={{ animationDelay: "300ms" }}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2 animate-in fade-in slide-in-from-bottom-4 duration-700" 
+            style={{ animationDelay: "300ms" }}>
               <Button size="lg" className="text-base gap-2 shadow-lg bg-blue-600  text-white hover:scale-105 transition-all duration-300 h-14 px-8 text-lg">
                 Encontrar Influenciadores <ArrowRight className="h-5 w-5" />
               </Button>

@@ -7,18 +7,18 @@ export interface Influencer {
 }
 
 export const allInfluencers: Influencer[] = [
-  { name: "Ana García", niche: "Moda", campaigns: 142, img: "/influencer-1.jpg", initials: "AG" },
-  { name: "Carlos López", niche: "Tecnologia", campaigns: 98, img: "/influencer-2.jpg", initials: "CL" },
-  { name: "Maria Torres", niche: "Fitness", campaigns: 87, img: "/influencer-3.jpg", initials: "MT" },
-  { name: "Diego Ruiz", niche: "Viagem", campaigns: 120, img: "/influencer-4.jpg", initials: "DR" },
-  { name: "Laura Vega", niche: "Beleza", campaigns: 65, img: "/influencer-5.jpg", initials: "LV" },
-  { name: "Pedro Morales", niche: "Games", campaigns: 73, img: "/influencer-6.jpg", initials: "PM" },
-  { name: "Sofia Herrera", niche: "Gastronomia", campaigns: 55, img: "/influencer-7.jpg", initials: "SH" },
-  { name: "Andrés Castillo", niche: "Música", campaigns: 41, img: "/influencer-8.jpg", initials: "AC" },
-  { name: "Valentina Ríos", niche: "Estilo de Vida", campaigns: 18, img: "/influencer-9.jpg", initials: "VR" },
-  { name: "Mateo Silva", niche: "Educação", campaigns: 12, img: "/influencer-10.jpg", initials: "MS" },
-  { name: "Camila Ortiz", niche: "Saúde", campaigns: 22, img: "/influencer-11.jpg", initials: "CO" },
-  { name: "Nicolás Peña", niche: "Esportes", campaigns: 15, img: "/influencer-12.jpg", initials: "NP" },
+  { name: "Ana García", niche: "Moda", campaigns: 142, img: "/images/influencer-1.jpg", initials: "AG" },
+  { name: "Carlos López", niche: "Tecnologia", campaigns: 98, img: "/images/influencer-2.jpg", initials: "CL" },
+  { name: "Maria Torres", niche: "Fitness", campaigns: 87, img: "/images/influencer-3.jpg", initials: "MT" },
+  { name: "Diego Ruiz", niche: "Viagem", campaigns: 120, img: "/images/influencer-4.jpg", initials: "DR" },
+  { name: "Laura Vega", niche: "Beleza", campaigns: 65, img: "/images/influencer-5.jpg", initials: "LV" },
+  { name: "Pedro Morales", niche: "Games", campaigns: 73, img: "/images/influencer-6.jpg", initials: "PM" },
+  { name: "Sofia Herrera", niche: "Gastronomia", campaigns: 55, img: "/images/influencer-7.jpg", initials: "SH" },
+  { name: "Andrés Castillo", niche: "Música", campaigns: 41, img: "/images/influencer-8.jpg", initials: "AC" },
+  { name: "Valentina Ríos", niche: "Estilo de Vida", campaigns: 18, img: "/images/influencer-9.jpg", initials: "VR" },
+  { name: "Mateo Silva", niche: "Educação", campaigns: 12, img: "/images/influencer-10.jpg", initials: "MS" },
+  { name: "Camila Ortiz", niche: "Saúde", campaigns: 22, img: "/images/influencer-11.jpg", initials: "CO" },
+  { name: "Nicolás Peña", niche: "Esportes", campaigns: 15, img: "/images/influencer-12.jpg", initials: "NP" },
 ];
 
 export const influencersByCategory = {
