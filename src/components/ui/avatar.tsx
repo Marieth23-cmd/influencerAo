@@ -1,5 +1,6 @@
 import * as React from "react";
 import type { StaticImageData } from "next/image";
+import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 
@@ -12,19 +13,18 @@ export interface AvatarImageProps extends Omit<React.ImgHTMLAttributes<HTMLImage
   src: string | StaticImageData;
 }
 
-const AvatarImage = React.forwardRef<HTMLImageElement, AvatarImageProps>(({ className, src, ...props }, ref) => {
+const AvatarImage = ({ className, src, alt }: AvatarImageProps) => {
   const imageSrc = typeof src === "string" ? src : src.src;
 
   return (
-    <img
-      ref={ref}
+    <Image
       className={cn("aspect-square h-full w-full object-cover", className)}
       src={imageSrc}
-      {...(props as Omit<React.ImgHTMLAttributes<HTMLImageElement>, "src">)}
+      alt={alt || ""}
+      fill
     />
   );
-});
-AvatarImage.displayName = "AvatarImage";
+};
 
 const AvatarFallback = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(({ className, ...props }, ref) => (
   <div ref={ref} className={cn("flex h-full w-full items-center justify-center rounded-full bg-muted", className)} {...props} />

@@ -1,4 +1,5 @@
 import { UserPlus, Search, MessageSquare, Rocket } from "lucide-react";
+import Image from "next/image";
 
 const HowItWorks = () => {
  
@@ -12,7 +13,7 @@ const HowItWorks = () => {
   return (
     <section className="py-24 relative overflow-hidden max-w-7xl mx-auto px-4">
       <div className="absolute inset-0">
-        <img src="/assets/influencer-6.jpg" alt="" className="w-full h-full object-cover" loading="lazy" />
+        <Image src="/assets/influencer-6.jpg" alt="" fill className="object-cover" />
         <div className="absolute inset-0 bg-foreground/90" />
       </div>
 

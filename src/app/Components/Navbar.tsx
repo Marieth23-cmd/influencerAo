@@ -54,10 +54,14 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [focused, setFocused] = useState(false);
-  const [dark, setDark] = useState(() => document.documentElement.classList.contains("dark"));
+  const [dark, setDark] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
 
   const links = ["Explorar", "Para Empresas", "Para Influenciadores", "Sobre"];
+
+  useEffect(() => {
+    setDark(document.documentElement.classList.contains("dark"));
+  }, []);
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
