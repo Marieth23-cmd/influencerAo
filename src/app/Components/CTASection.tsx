@@ -5,7 +5,7 @@ import Image from "next/image";
 const CTASection = () => {
   
   return (
-    <section className=" relative overflow-hidden max-w-7xl mx-auto px-4 py-14" >
+    <section className=" relative overflow-hidden max-w-7xl mx-auto px-4 " >
       <div className="absolute inset-0">
         <Image src="/images/herovisual.jpg" fill   alt="" className="w-full h-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/95" />

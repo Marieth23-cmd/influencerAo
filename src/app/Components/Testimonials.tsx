@@ -34,7 +34,7 @@ const Testimonials = () => {
                   <Star key={j} className={`h-5 w-5 ${j < (item.rating || 0) ? "fill-accent text-accent" : "text-muted"}`} />
                 ))}
               </div>
-              <p className="text-muted-foreground italic leading-relaxed mb-6 text-base">"{item.text}"</p>
+              <p className="text-muted-foreground italic leading-relaxed mb-6 text-base">{item.text}</p>
               <div className="flex items-center gap-4 pt-4 border-t">
                 <Avatar className="h-12 w-12 ring-2 ring-primary/20">
                   <AvatarImage src={item.img} alt={item.name} className="object-cover" />
