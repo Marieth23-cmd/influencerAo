@@ -2,7 +2,7 @@ import { FaInstagram, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 text-white py-16 border-t border-slate-800 ">
+    <footer className="bg-slate-950 dark:bg-slate-900 text-white py-14  ">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
         {/* Conteúdo principal */}

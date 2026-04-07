@@ -87,16 +87,16 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-white dark:bg-black backdrop-blur-md">
       <div className="container mx-auto flex h-16 items-center justify-between gap-4 px-4  max-w-7xl ">
-        <a href="/" className="flex items-center gap-2 font-bold text-xl text-blue-600 text-primary shrink-0">
+        <a href="/" className="flex items-center gap-2 font-bold text-xl text-blue-600 dark:text-blue-500 text-primary shrink-0">
           <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground text-sm font-black"></div>
           InfluencerAo
         </a>
 
         <div ref={searchRef} className="hidden md:flex relative max-w-xs flex-1">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white" />
           <Input
             placeholder="Buscar influenciadores por nicho..."
-            className="pl-9 h-9"
+            className="pl-9 h-9 dark:border-gray-600"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onFocus={() => setFocused(true)}
@@ -130,12 +130,12 @@ const Navbar = () => {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden border-t border-slate-200 p-4 space-y-3 animate-in slide-in-from-top-2 duration-200 ">
-          <div className="relative">
+        <div className="md:hidden border-t border-slate-200  p-4 space-y-3 animate-in slide-in-from-top-2 duration-200 ">
+          <div className="relative -800">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
               placeholder="Buscar influenciadores..."
-              className="pl-9"
+              className="pl-9 dark:border-gray-600"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               onFocus={() => setFocused(true)}
@@ -147,7 +147,7 @@ const Navbar = () => {
               {label}
             </Button>
           ))}
-          <div className="flex items-center gap-2 pt-2 border-t border-slate-200">
+          <div className="flex items-center gap-2 pt-2 border-t border-slate-200 dark:border-gray-600">
             <Button variant="ghost" size="icon" className="text-muted-foreground" onClick={toggleDark}>
               {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </Button>

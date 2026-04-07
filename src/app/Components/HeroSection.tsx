@@ -1,59 +1,74 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+
+const Images=[
+  "/images/influencer-1.jpg",
+  "/images/influencer-2.jpg",
+  "/images/influencer-3.jpg",
+]
+  
+
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-blue-200 dark:bg-blue-900 mb-12 ">
-        <Image
-          src="/images/heroi.jpg"
-          alt="Hero Background"
-          fill
-         className="object-cover object-center h-full w-full "
-        />
-
-        <div className="insert-0 absolute bg-black/15"></div>
-
-      <div className="absolute inset-0 ">
-        
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-foreground/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-foreground/30" />
+    <section className="relative min-h-[85vh] flex items-center overflow-hidden ">
+      <div className="absolute inset-0">
+        <Image src= "/images/heroi.jpg" alt="" className="w-full h-full object-cover" width={1920} height={1080} />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/50 to-black/30" />
       </div>
 
-      
-      <div className="container mx-auto px-4 relative z-10 max-w-7xl ">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="space-y-8 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 rounded-full text-white px-5 py-2 text-sm text-primary-foreground/90 animate-in fade-in slide-in-from-bottom-4 duration-700">
-              <Sparkles className="h-4 w-4 text-accent" />
-              A plataforma #1 de marketing de influência
-            </div>
+      <div className="container relative z-10 max-w-7xl mx-auto px-4">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6 text-center lg:text-left">
+            <h1 className="text-3xl md:text-4xl text-white lg:text-5xl font-bold tracking-tight leading-[1.1] animate-in fade-in slide-in-from-bottom-4 duration-700">
+              <span className="text-white">A plataforma que conecta </span>
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text ">
+                criadores angolanos
+              </span>
+              <span className="text-white"> a marcas</span>
+            </h1>
 
-            <h1 className=" text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 duration-700" style={{ animationDelay: "100ms" }}>
-                Conectamos empresas com os melhores influenciadores para gerar  
-                  <span className="  from-blue-600 via-purple-700 to-blue-700"> resultados reais</span>
-               </h1>
-                
-            <p className="text-white text-lg md:text-xl text-primary-foreground/70 max-w-7xl font-medium animate-in fade-in slide-in-from-bottom-4 duration-700"
-             style={{ animationDelay: "200ms" }}>
-              Encontre criadores por nicho, analise desempenho e execute campanhas de impacto
+            <p className="text-lg text-white font-normal max-w-lg animate-in fade-in slide-in-from-bottom-4 duration-700" style={{ animationDelay: "150ms" }}>
+              Encontre influenciadores por nicho, analise desempenho e lance campanhas de impacto em Angola.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2 animate-in fade-in slide-in-from-bottom-4 duration-700" 
-            style={{ animationDelay: "300ms" }}>
-              <Button size="lg" className="text-base gap-2 shadow-lg bg-blue-600  text-white hover:scale-105 transition-all duration-300 h-14 px-8 text-lg">
-                Encontrar Influenciadores <ArrowRight className="h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="text-base border-primary-foreground/20 text-primary-foreground bg-primary-foreground/5 hover:bg-primary-foreground/10 shadow-lg h-14 px-8 text-lg backdrop-blur-sm transition-all duration-300 hover:scale-105">
-                <Play className="h-4 w-4 mr-2" />
-                Sou Influenciador
+            <div className="animate-in fade-in slide-in-from-bottom-4 duration-700" style={{ animationDelay: "250ms" }}>
+              <Button size="lg" className="text-base text-white gap-2 rounded-xl bg-blue-600 shadow-lg shadow-blue-500/30 hover:scale-105 transition-all duration-300 h-12 px-8">
+                Começar Agora <ArrowRight className="h-5 w-5" />
               </Button>
             </div>
 
-            
+            <div className="flex items-center gap-4 justify-center lg:justify-start pt-2 animate-in fade-in slide-in-from-bottom-4 duration-700" style={{ animationDelay: "350ms" }}>
+              <div className="flex -space-x-3">
+                {Images.map((src, i) => (
+                  <div key={i} className="h-10 w-10 rounded-full border-2 border-card overflow-hidden">
+                    <Image src={src} alt="" className="w-full h-full object-cover" width={40} height={40} />
+                  </div>
+                ))}
+              </div>
+              <p className="text-sm text-white font-normal">
+                <span className="font-semibold text-white">+2.500</span> criadores activos
+              </p>
+            </div>
           </div>
 
-         
+          <div className="relative hidden lg:flex justify-center animate-in fade-in slide-in-from-right-8 duration-1000" style={{ animationDelay: "300ms" }}>
+            <div className="relative">
+              <div className="rounded-3xl overflow-hidden shadow-2xl w-[380px] h-[480px]">
+                <Image src={Images[0]} fill alt="Criador de conteúdo" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 via-transparent to-transparent" />
+              </div>
+
+              <div className="absolute -top-6 -right-12 w-32 h-40 rounded-2xl overflow-hidden shadow-xl animate-float border-3 border-card">
+                <Image src={Images[1]} fill alt="" className="w-full h-full object-cover" />
+              </div>
+
+              <div className="absolute -bottom-4 -left-10 w-28 h-36 rounded-2xl overflow-hidden shadow-xl animate-float-delayed border-3 border-card">
+                <Image src={Images[2]} fill alt="" className="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

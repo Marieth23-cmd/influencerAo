@@ -24,7 +24,8 @@ const TabsTrigger = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttribut
 ));
 TabsTrigger.displayName = "TabsTrigger";
 
-const TabsContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(({ className, ...props }, ref) => (
+const TabsContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & {value?:string}>
+(({ className, ...props }, ref) => (
   <div ref={ref} className={cn("mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2", className)} {...props} />
 ));
 TabsContent.displayName = "TabsContent";

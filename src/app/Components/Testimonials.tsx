@@ -1,4 +1,4 @@
-import { Star, Quote } from "lucide-react";
+import { Star } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
@@ -12,22 +12,22 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-24 bg-background relative overflow-hidden max-w-7xl mx-auto px-4">
+    <section className="py-8 lg:py-14 bg-background relative overflow-hidden max-w-7xl mx-auto px-4">
       <div className="absolute top-20 left-10 h-64 w-64 rounded-full bg-primary/5 blur-3xl animate-float-slow" />
       <div className="absolute bottom-20 right-10 h-48 w-48 rounded-full bg-accent/5 blur-3xl animate-float" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-14 animate-on-scroll">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground">O Que as Empresas Dizem</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">O Que as Empresas Dizem</h2>
           <p className="text-muted-foreground mt-3 text-lg">Resultados reais de marcas reais</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((item, i) => (
-            <div key={item.name} className="card-3d rounded-2xl border bg-card p-8 relative overflow-hidden animate-on-scroll" style={{ transitionDelay: `${i * 150}ms` }}>
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-primary" />
+            <div key={item.name} className="card-3d rounded-2xl border dark:border-gray-600 p-8 relative overflow-hidden animate-on-scroll" style={{ transitionDelay: `${i * 150}ms` }}>
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-purple-500 to-purple-700" />
               <div className="absolute top-6 right-6 opacity-10">
-                <Quote className="h-16 w-16 text-primary" />
+                
               </div>
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: 5 }).map((_, j) => (
@@ -35,7 +35,7 @@ const Testimonials = () => {
                 ))}
               </div>
               <p className="text-muted-foreground italic leading-relaxed mb-6 text-base">{item.text}</p>
-              <div className="flex items-center gap-4 pt-4 border-t">
+              <div className="flex items-center gap-4 pt-4 border-t dark:border-gray-600">
                 <Avatar className="h-12 w-12 ring-2 ring-primary/20">
                   <AvatarImage src={item.img} alt={item.name} className="object-cover" />
                   <AvatarFallback className="bg-primary/10 text-primary font-bold">{item.name.charAt(0)}</AvatarFallback>
