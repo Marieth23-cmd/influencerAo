@@ -19,7 +19,7 @@ const Testimonials = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-14 animate-on-scroll">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">O Que as Empresas Dizem</h2>
-          <p className="text-muted-foreground mt-3 text-lg">Resultados reais de marcas reais</p>
+          <p className="text-white mt-3 text-lg">Resultados reais de marcas reais</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
