@@ -1,20 +1,45 @@
+"use client";
+import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
-const Images=[
+const Images = [
   "/images/influencer-1.jpg",
   "/images/influencer-2.jpg",
   "/images/influencer-3.jpg",
-]
-  
-
+];
 
 const HeroSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const switchTo = useCallback((index: number) => {
+    if (index === activeIndex || isTransitioning) return;
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setActiveIndex(index);
+      setIsTransitioning(false);
+    }, 400);
+  }, [activeIndex, isTransitioning]);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setActiveIndex((prev) => (prev + 1) % Images.length);
+        setIsTransitioning(false);
+      }, 300);
+    }, 1500);
+    return () => clearInterval(timer);
+  }, []);
+
+  const smallImages = Images.filter((_, i) => i !== activeIndex);
+
   return (
-    <section className="relative min-h-[85vh] flex items-center overflow-hidden ">
+    <section className="relative min-h-[85vh] flex items-center overflow-hidden">
       <div className="absolute inset-0">
-        <Image src= "/images/heroi.jpg" alt="" className="w-full h-full object-cover" width={1920} height={1080} />
+        <Image src="/images/heroi.jpg" alt="" className="w-full h-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/50 to-black/30" />
       </div>
 
@@ -23,7 +48,7 @@ const HeroSection = () => {
           <div className="space-y-6 text-center lg:text-left">
             <h1 className="text-3xl md:text-4xl text-white lg:text-5xl font-bold tracking-tight leading-[1.1] animate-in fade-in slide-in-from-bottom-4 duration-700">
               <span className="text-white">A plataforma que conecta </span>
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text ">
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-purple-400 bg-clip-text text-transparent font-extrabold">
                 criadores angolanos
               </span>
               <span className="text-white"> a marcas</span>
@@ -53,20 +78,63 @@ const HeroSection = () => {
             </div>
           </div>
 
+          {/* coluna direita — animações adicionadas */}
           <div className="relative hidden lg:flex justify-center animate-in fade-in slide-in-from-right-8 duration-1000" style={{ animationDelay: "300ms" }}>
             <div className="relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl w-[380px] h-[480px]">
-                <Image src={Images[0]} fill alt="Criador de conteúdo" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 via-transparent to-transparent" />
+
+              {/* imagem principal com crossfade */}
+              <div className="rounded-3xl overflow-hidden shadow-2xl w-[380px] h-[480px] relative">
+                {Images.map((src, i) => (
+                  <Image
+                    key={i}
+                    src={src}
+                    alt="Criador de conteúdo"
+                    fill
+                    className={`object-cover transition-all duration-700 ease-in-out ${
+                      i === activeIndex
+                        ? "opacity-100 scale-100"
+                        : "opacity-0 scale-105"
+                    }`}
+                  />
+                ))}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10" />
               </div>
 
-              <div className="absolute -top-6 -right-12 w-32 h-40 rounded-2xl overflow-hidden shadow-xl animate-float border-3 border-card">
-                <Image src={Images[1]} fill alt="" className="w-full h-full object-cover" />
+              {/* thumbnail superior direita — clicável */}
+              <button
+                onClick={() => switchTo(Images.indexOf(smallImages[0]))}
+                className={`absolute -top-6 -right-12 w-32 h-40 rounded-2xl overflow-hidden shadow-xl animate-float border-3 border-card cursor-pointer transition-all duration-500 hover:scale-110 hover:shadow-2xl ${
+                  isTransitioning ? "opacity-70 scale-95" : "opacity-100 scale-100"
+                }`}
+              >
+                <Image src={smallImages[0]} alt="" fill className="object-cover transition-all duration-500" />
+              </button>
+
+              {/* thumbnail inferior esquerda — clicável */}
+              <button
+                onClick={() => switchTo(Images.indexOf(smallImages[1]))}
+                className={`absolute -bottom-4 -left-10 w-28 h-36 rounded-2xl overflow-hidden shadow-xl animate-float-delayed border-3 border-card cursor-pointer transition-all duration-500 hover:scale-110 hover:shadow-2xl ${
+                  isTransitioning ? "opacity-70 scale-95" : "opacity-100 scale-100"
+                }`}
+              >
+                <Image src={smallImages[1]} alt="" fill className="object-cover transition-all duration-500" />
+              </button>
+
+              {/* bolinhas de progresso */}
+              <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                {Images.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => switchTo(i)}
+                    className={`rounded-full transition-all duration-300 ${
+                      i === activeIndex
+                        ? "w-6 h-2 bg-blue-600"
+                        : "w-2 h-2 bg-white/40 hover:bg-white/60"
+                    }`}
+                  />
+                ))}
               </div>
 
-              <div className="absolute -bottom-4 -left-10 w-28 h-36 rounded-2xl overflow-hidden shadow-xl animate-float-delayed border-3 border-card">
-                <Image src={Images[2]} fill alt="" className="w-full h-full object-cover" />
-              </div>
             </div>
           </div>
         </div>

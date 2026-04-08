@@ -4,6 +4,7 @@ import FeaturedInfluencers from "./Components/FeaturedInfluencers";
 import HowItWorks from "./Components/HowItWorks";
 import Testimonials from "./Components/Testimonials";
 import Footer from "./Components/Footer";
+import HowltInfluencer from "./Components/HowltInfluencer";
 
 const Index = () => (
   <div className="min-h-screen flex flex-col">
@@ -13,6 +14,8 @@ const Index = () => (
       <FeaturedInfluencers />
       <HowItWorks />
       <Testimonials />
+
+      <HowltInfluencer /> 
      
     </main>
     <Footer />
