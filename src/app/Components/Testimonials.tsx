@@ -73,7 +73,7 @@ const Testimonials = () => {
                 “{item.text}”
               </p>
 
-              {/* Footer */}
+              {/* Footermnknknknk */}
               <div className="flex items-center gap-4 pt-4 border-t border-gray-200 dark:border-white/10">
                 <Avatar className="h-12 w-12 ring-2 ring-blue-500/20">
                   <AvatarImage src={item.img} alt={item.name} className="object-cover" />
