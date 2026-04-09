@@ -27,7 +27,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-10 lg:py-16 relative max-w-7xl mx-auto px-4">
+    <section className="py-8 lg:py-14 relative max-w-7xl mx-auto px-4">
 
       {/* Background decor */}
       <div className="absolute top-20 left-10 h-64 w-64 rounded-full bg-blue-500/10 blur-3xl" />
@@ -36,7 +36,7 @@ const Testimonials = () => {
       <div className="relative z-10">
 
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
             O Que as Empresas Dizem
           </h2>

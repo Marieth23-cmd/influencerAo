@@ -5,6 +5,7 @@ import HowItWorks from "./Components/HowItWorks";
 import Testimonials from "./Components/Testimonials";
 import Footer from "./Components/Footer";
 import HowltInfluencer from "./Components/HowltInfluencer";
+import Cta from "./Components/Cta";
 
 const Index = () => (
   <div className="min-h-screen flex flex-col">
@@ -18,6 +19,7 @@ const Index = () => (
       <HowltInfluencer /> 
      
     </main>
+    <Cta />
     <Footer />
   </div>
 );
