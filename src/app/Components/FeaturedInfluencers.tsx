@@ -160,7 +160,7 @@ const FeaturedInfluencers = () => {
 
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-4xl font-bold text-foreground">
+          <h2 className="text-2xl md:text-4xl font-semibold text-foreground">
             Influenciadores em Destaque
           </h2>
           <p className="mt-3 text-base lg:text-lg max-w-2xl mx-auto text-muted-foreground">
@@ -172,13 +172,13 @@ const FeaturedInfluencers = () => {
           <div className="flex justify-center mb-6">
             <TabsList className="p-1.5 rounded-2xl flex gap-2">
               <TabsTrigger value="top" className="rounded-xl px-2 lg:px-6 dark:bg-white/15 data-[state=active]:shadow-lg">
-                Top Performers
+                Em Alta
               </TabsTrigger>
               <TabsTrigger value="sponsored" className="rounded-xl px-2 lg:px-6   dark:bg-white/15 data-[state=active]:shadow-lg">
                 Patrocinados
               </TabsTrigger>
               <TabsTrigger value="rising" className="rounded-xl px-2 lg:px-6 dark:bg-white/15 data-[state=active]:shadow-lg">
-                Em Ascensão
+                Novos Talentos
               </TabsTrigger>
             </TabsList>
           </div>

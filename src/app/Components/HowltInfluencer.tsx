@@ -5,7 +5,7 @@ export default function HowltInfluencer() {
   return (
         <div className=" py-8 lg:py-14  flex  flex-col lg:flex-row items-center gap-6 lg:gap-14 max-w-7xl mx-auto px-4">
              <div className="max-w-2xl">
-                <h1 className="text-2xl md:text-4xl font-bold mb-10">
+                <h1 className="text-2xl md:text-4xl font-semibold mb-10">
                 Gerencie todas as suas mensagens de forma simples e eficiente.
                  </h1>
 

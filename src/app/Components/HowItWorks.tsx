@@ -43,7 +43,7 @@ const HowItWorks = () => {
 
         {/* Header */}
         <div className="text-center mb-10 lg:mb-14">
-          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white">
+          <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 dark:text-white">
             Como Funciona para Empresas
           </h2>
           <p className="mt-2 text-gray-700 dark:text-gray-300 text-sm md:text-base">
@@ -52,7 +52,7 @@ const HowItWorks = () => {
         </div>
 
         {/* MOBILE (timeline vertical) */}
-        <div className="flex flex-col gap-8 md:hidden relative">
+        <div className="flex flex-col gap-6 md:hidden relative">
 
           {/* linha vertical */}
           <div className="absolute left-5 top-0 bottom-0 w-[2px] bg-gray-300 dark:bg-gray-700" />
