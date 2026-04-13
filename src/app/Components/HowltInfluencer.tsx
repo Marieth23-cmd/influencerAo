@@ -18,13 +18,13 @@ export default function HowltInfluencer() {
             </p>
             </div>
      
-        <div className="max-w-lg text-center lg:text-left">
+        <div className="text-center lg:text-left">
             <Image
                 src="/images/influecermsg.png"
                 alt="Imagem de um influenciador digital"
                 width={500}
                 height={500}
-                className="rounded-lg shadow-lg w-full  h-full object-cover"
+                className="rounded-lg shadow-lg  w-full  h-full object-cover"
             />
              </div>
             

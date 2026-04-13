@@ -1,6 +1,6 @@
 "use client";
 import { useState, useMemo, useEffect, useRef } from "react";
-import { Search, SlidersHorizontal, MapPin, Users, TrendingUp, Eye, Star, X, ChevronDown } from "lucide-react";
+import { Search, SlidersHorizontal, MapPin, Users, TrendingUp, Eye, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
@@ -34,10 +34,6 @@ const formatFollowers = (n: number) => {
   return n.toString();
 };
 
-const formatPrice = (n: number) => {
-  if (n >= 1000) return `${(n / 1000).toFixed(0)}K Kz`;
-  return `${n} Kz`;
-};
 
 const NativeSelect = ({ value, onChange, options, icon, label }: {
   value: string; onChange: (v: string) => void; options: string[]; icon?: React.ReactNode; label: string;
@@ -260,16 +256,8 @@ const EncontrarInfluencer = () => {
                       />
                       <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 50%)" }} />
 
-                      {/* Platform badge */}
-                      <span className="absolute top-3 left-3 text-xs font-medium px-2.5 py-1 rounded-full backdrop-blur-sm" >
-                        {inf.platform}
-                      </span>
+                    
 
-                      {/* Rating */}
-                      <div className="absolute top-3 right-3 flex items-center gap-1 rounded-full px-2 py-0.5 backdrop-blur-sm" >
-                        <Star className="h-3 w-3" style={{ fill: "hsl(217,91%,50%)", color: "hsl(217,91%,50%)" }} />
-                        <span className="text-xs font-semibold" style={{ color: "hsl(222,47%,11%)" }}>{inf.rating}</span>
-                      </div>
 
                       {/* Name overlay */}
                       <div className="absolute bottom-3 left-3 right-3">
@@ -287,7 +275,7 @@ const EncontrarInfluencer = () => {
                         <span className="text-xs font-medium px-2.5 py-1 rounded-full" style={{ background: "hsl(217,91%,95%)", color: "hsl(217,91%,45%)" }}>
                           {inf.niche}
                         </span>
-                        <span className="text-sm font-bold" style={{ color: "hsl(217,91%,50%)" }}>{formatPrice(inf.price)}</span>
+                      
                       </div>
 
                       {/* Stats row - clean, no bg */}

@@ -66,7 +66,7 @@ const Navbar = () => {
   const links = [{label:"Encontrar Influencers", href:"/encontrarInfluencer"},
               {label:"Para Empresas"  , href: "/paraEmpresas"},
               {label:"Para Influenciadores", href: "/paraInfluencer"},
-              {label:"Sobre" , href:"/about"}];
+              {label:"Campanhas" , href:"/Campanhas"}];
 
   useEffect(() => {
     setDark(document.documentElement.classList.contains("dark"));
