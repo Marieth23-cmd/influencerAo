@@ -6,7 +6,7 @@ const Testimonials = () => {
     {
       name: "TechStart Inc.",
       role: "CEO",
-      text: "A InfluConnect nos ajudou a encontrar os influenciadores perfeitos para o lançamento do nosso produto. Nosso alcance cresceu 300% em apenas dois meses.",
+      text: "A InfluencerAo nos ajudou a encontrar os influenciadores perfeitos para o lançamento do nosso produto. Nosso alcance cresceu 300% em apenas dois meses.",
       rating: 5,
       img: "/images/influencer-1.jpg",
     },
