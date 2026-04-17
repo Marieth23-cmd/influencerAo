@@ -85,7 +85,7 @@ const Campanhas = () => {
   const activeFilters = [nicho !== "Todos" ? nicho : null, orcamento !== "Todos" ? orcamento : null, local !== "Todas" ? local : null].filter(Boolean);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[hsl(222,84%,5%)] ">
+    <div className="min-h-screen  dark:bg-black ">
       <Navbar />
         <main className="flex-1 max-w-7xl mx-auto px-4">
       {/* Header */}
@@ -99,10 +99,10 @@ const Campanhas = () => {
             <div className="flex items-center gap-2 mb-3">
              
             </div>
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[hsl(222,47%,11%)] dark:text-[hsl(210,40%,98%)] mb-3">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[hsl(222,47%,11%)] dark:text-[hsl(210,40%,98%)] mb-3">
               Encontre a campanha <span className="text-blue-600">perfeita</span>
             </h1>
-            <p className="text-[hsl(215,16%,47%)] dark:text-[hsl(215,20%,65%)] text-lg max-w-2xl mb-8">
+            <p className="text-gray-900  dark:text-[hsl(215,20%,65%)] text-lg max-w-2xl mb-8">
               Conecte-se com marcas e empresas angolanas. Candidate-se a campanhas que combinam com o seu perfil.
             </p>
           </FadeIn>
