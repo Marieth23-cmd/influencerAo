@@ -1,4 +1,5 @@
 import { FaInstagram, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -64,8 +65,12 @@ export default function Footer() {
                 <li><a href="#" className="hover:text-white transition">FAQ</a></li>
                 <li><a href="#" className="hover:text-white transition"> Guias </a></li>
                 <li><a href="#" className="hover:text-white transition">API</a></li>
-                <li><a href="#" className="hover:text-white transition">Perfil Influencer</a></li>
-                <li><a href="#" className="hover:text-white transition">Perfil Empresarial</a></li>
+                <li><Link href="/PerfilInfluencer" className="hover:text-white transition">
+                  Perfil Influencer
+                </Link></li>
+                <li><Link href="/PerfilEmpresa" className="hover:text-white transition">
+                  Perfil Empresarial
+                </Link></li>
               </ul>
             </div>
 
