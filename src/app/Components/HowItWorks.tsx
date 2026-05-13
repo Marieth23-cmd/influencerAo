@@ -37,16 +37,16 @@ const HowItWorks = () => {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-white/85 dark:bg-blue-950/85 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-black/75 dark:bg-blue-950/85 backdrop-blur-sm" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
 
         {/* Header */}
         <div className="text-center mb-10 lg:mb-14">
-          <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 dark:text-white">
+          <h2 className="text-2xl md:text-4xl font-semibold text-white">
             Como Funciona para Empresas
           </h2>
-          <p className="mt-2 text-gray-700 dark:text-gray-300 text-sm md:text-base">
+          <p className="mt-2 text-gray-300 text-sm md:text-base">
             Quatro passos simples para lançar sua campanha
           </p>
         </div>
@@ -74,10 +74,10 @@ const HowItWorks = () => {
 
                 {/* Text */}
                 <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white text-base">
+                  <h3 className="font-semibold text-white text-base">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                  <p className="text-sm text-gray-300 mt-1">
                     {step.desc}
                   </p>
                 </div>
@@ -107,11 +107,11 @@ const HowItWorks = () => {
                   <Icon className="w-8 h-8 text-blue-600 dark:text-blue-400" />
                 </div>
 
-                <h3 className="font-semibold text-lg text-gray-900 dark:text-white">
+                <h3 className="font-semibold text-lg text-white">
                   {step.title}
                 </h3>
 
-                <p className="text-sm lg:text-base text-gray-600 dark:text-gray-300 max-w-[220px]">
+                <p className="text-sm lg:text-base text-gray-300 max-w-[220px]">
                   {step.desc}
                 </p>
               </div>

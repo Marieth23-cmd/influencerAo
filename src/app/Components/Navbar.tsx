@@ -1,12 +1,13 @@
 "use client";
 import Link from "next/link";
-import { Search, User, Menu, X, Globe, Moon, Sun } from "lucide-react";
+import { Search,  Menu, X, Globe, Moon, Sun } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { useState, useRef, useEffect } from "react";
 import { allInfluencers } from "@/data/influencers";
+
 
 
 
@@ -95,7 +96,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-white dark:bg-black backdrop-blur-md shadow-md dark:border-gray-600">
-      <div className="container mx-auto flex h-16 items-center justify-between gap-4 px-4  max-w-7xl ">
+      <div className="container mx-auto flex h-16 items-center justify-between gap-6 px-4  max-w-7xl ">
         <a href="/" className="flex items-center gap-2 font-bold text-xl text-blue-600 dark:text-blue-500  shrink-0">
           <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground text-sm font-black"></div>
           InfluencerAo
@@ -121,16 +122,26 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="hidden md:flex items-center gap-2">
-          <Button variant="ghost" size="icon" className="text-muted-foreground" onClick={toggleDark}>
+        <div className="hidden md:flex items-center ">
+
+          <Button variant="ghost" size="icon"  onClick={toggleDark}>
             {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </Button>
-          <Button variant="ghost" size="icon" className="text-muted-foreground">
+
+          <Button variant="ghost" size="icon" >
             <Globe className="h-4 w-4" />
           </Button>
-          <Avatar className="h-9 w-9 cursor-pointer">
-            <AvatarFallback className="bg-primary/10 text-primary text-sm"><User className="h-4 w-4" /></AvatarFallback>
-          </Avatar>
+
+          <div className="flex gap-4">
+           <Link href="/Login" className="text-gray-700  py-1 px-1  font-medium  hover:text-blue-600">
+            Entrar 
+          </Link>
+       
+          <Link href="/Registo" className="text-white bg-blue-600 py-1 px-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+            Criar Conta
+          </Link>
+          </div>
+
         </div>
 
         <Button variant="ghost" size="icon" className="lg:hidden" onClick={() => setMobileOpen(!mobileOpen)}>
@@ -159,15 +170,26 @@ const Navbar = () => {
             </Link>
           ))}
           <div className="flex items-center gap-2 pt-2 border-t border-slate-200 dark:border-gray-600">
+            <div >
             <Button variant="ghost" size="icon" className="text-muted-foreground" onClick={toggleDark}>
               {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </Button>
             <Button variant="ghost" size="icon" className="text-muted-foreground">
               <Globe className="h-4 w-4" />
             </Button>
-            <Avatar className="h-9 w-9 cursor-pointer">
-              <AvatarFallback className="bg-primary/10 text-primary text-sm"><User className="h-4 w-4" /></AvatarFallback>
-            </Avatar>
+            </div>
+
+
+          <div className="flex gap-4">
+           <Link href="/Login" className="text-gray-700  py-1 px-1  font-medium  hover:text-blue-600">
+            Entrar 
+          </Link>
+       
+          <Link href="/Login" className="text-white bg-blue-600 py-1 px-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+            Criar Conta
+          </Link>
+          </div>
+
           </div>
         </div>
       )}

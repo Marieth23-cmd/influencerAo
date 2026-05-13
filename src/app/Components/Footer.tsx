@@ -62,8 +62,10 @@ export default function Footer() {
               <h3 className="font-semibold text-white mb-4">Recursos</h3>
               <ul className="space-y-2 text-sm text-slate-400">
                 <li><a href="#" className="hover:text-white transition">FAQ</a></li>
-                <li><a href="#" className="hover:text-white transition">Guias</a></li>
+                <li><a href="#" className="hover:text-white transition"> Guias </a></li>
                 <li><a href="#" className="hover:text-white transition">API</a></li>
+                <li><a href="#" className="hover:text-white transition">Perfil Influencer</a></li>
+                <li><a href="#" className="hover:text-white transition">Perfil Empresarial</a></li>
               </ul>
             </div>
 
