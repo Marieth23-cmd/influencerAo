@@ -67,10 +67,24 @@ export default function Footer() {
                 <li><a href="#" className="hover:text-white transition">API</a></li>
                 <li><Link href="/PerfilInfluencer" className="hover:text-white transition">
                   Perfil Influencer
-                </Link></li>
-                <li><Link href="/PerfilEmpresa" className="hover:text-white transition">
+                </Link>
+                </li>
+                <li>
+                  <Link href="/PerfilEmpresa" className="hover:text-white transition">
                   Perfil Empresarial
-                </Link></li>
+                </Link>
+                </li>
+                 
+                <li>
+                 <Link href="/PerfilEmpresaPublico" className="hover:text-white transition">
+                  Portfolio Empresarial
+                </Link>
+                </li>
+                <li>
+                 <Link href="/PortfolioInflu2" className="hover:text-white transition">
+                  Portfolio I2
+                </Link>
+                </li>
               </ul>
             </div>
 

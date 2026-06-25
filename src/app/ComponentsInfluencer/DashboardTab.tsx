@@ -3,8 +3,7 @@
 import {
   Megaphone, Eye, Inbox, Wallet, Activity, MessageSquare,
   CheckCircle2, ArrowUpRight, Camera, Plus, Star, Edit3,
-  MapPin, Shield,
-} from "lucide-react";
+  MapPin, Shield,} from "lucide-react";
 import { TabKey } from "./types";
 import { StatusPill } from "./Ui";
 
