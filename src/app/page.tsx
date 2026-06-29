@@ -1,10 +1,7 @@
 import Navbar from "./Components/Navbar";
 import HeroSection from "./Components/HeroSection";
 import FeaturedInfluencers from "./Components/FeaturedInfluencers";
-import HowItWorks from "./Components/HowItWorks";
-import Testimonials from "./Components/Testimonials";
 import Footer from "./Components/Footer";
-import HowltInfluencer from "./Components/HowltInfluencer";
 import Cta from "./Components/Cta";
 
 const Index = () => (
@@ -13,15 +10,10 @@ const Index = () => (
     <main className="flex-1">
       <HeroSection />
       <FeaturedInfluencers />
-      <HowItWorks />
-      <Testimonials />
-
-      <HowltInfluencer /> 
-     
-    </main>
-    <Cta />
-    <Footer />
-  </div>
+       </main>
+      <Cta />
+      <Footer />
+     </div>
 );
 
 export default Index;

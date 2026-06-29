@@ -64,10 +64,14 @@ const Navbar = () => {
   const [dark, setDark] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
 
-  const links = [{label:"Encontrar Influencers", href:"/encontrarInfluencer"},
-              {label:"Para Empresas"  , href: "/paraEmpresas"},
-              {label:"Para Influenciadores", href: "/paraInfluencer"},
-              {label:"Campanhas" , href:"/Campanhas"}];
+  const links = [
+    
+    {label:"Principal", href:"/"},
+   
+    {label:"Blog", href:"/blog"},
+    {label:"Encontrar Influencers", href:"/encontrarInfluencer"},
+  ]
+             
 
   useEffect(() => {
     setDark(document.documentElement.classList.contains("dark"));
