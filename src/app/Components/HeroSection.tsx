@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+
 import Image from "next/image";
 
 const Images = [
@@ -54,28 +53,11 @@ const HeroSection = () => {
               <span className="text-white"> a marcas</span>
             </h1>
 
-            <p className="text-lg text-white font-normal max-w-lg animate-in fade-in slide-in-from-bottom-4 duration-700" style={{ animationDelay: "150ms" }}>
-              Encontre influenciadores por nicho, analise desempenho e lance campanhas de impacto em Angola.
+            <p className="text-base text-white font-normal max-w-lg animate-in fade-in slide-in-from-bottom-4 duration-700" style={{ animationDelay: "150ms" }}>
+              Encontre influenciadores por nicho, analise desempenho  em Angola.
             </p>
 
-            <div className="animate-in fade-in slide-in-from-bottom-4 duration-700" style={{ animationDelay: "250ms" }}>
-              <Button size="lg" className="text-base text-white font-medium gap-2 rounded-xl bg-blue-600 shadow-lg shadow-blue-500/30 hover:scale-105 transition-all duration-300 h-12 px-8">
-                Começar Agora <ArrowRight className="h-5 w-5" />
-              </Button>
-            </div>
-
-            <div className="flex items-center gap-4 justify-start pt-2 animate-in fade-in slide-in-from-bottom-4 duration-700" style={{ animationDelay: "350ms" }}>
-              <div className="flex -space-x-3">
-                {Images.map((src, i) => (
-                  <div key={i} className="h-10 w-10 rounded-full border-2 border-card overflow-hidden">
-                    <Image src={src} alt="" className="w-full h-full object-cover" width={40} height={40} />
-                  </div>
-                ))}
-              </div>
-              <p className="text-sm text-white font-normal">
-                <span className="font-semibold text-white">+2.500</span> criadores activos
-              </p>
-            </div>
+           
           </div>
 
           {/* coluna direita — animações adicionadas */}

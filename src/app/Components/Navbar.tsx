@@ -67,9 +67,8 @@ const Navbar = () => {
   const links = [
     
     {label:"Principal", href:"/"},
-   
-    {label:"Blog", href:"/blog"},
     {label:"Encontrar Influencers", href:"/encontrarInfluencer"},
+     {label:"Sobre Nós", href:"/SobreNos"},
   ]
              
 
@@ -99,11 +98,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-white dark:bg-black backdrop-blur-md shadow-md dark:border-gray-600">
-      <div className="container mx-auto flex h-16 items-center justify-between gap-6 px-4  max-w-7xl ">
-        <a href="/" className="flex items-center gap-2 font-bold text-xl text-blue-600 dark:text-blue-500  shrink-0">
-          <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground text-sm font-black"></div>
-          InfluencerAo
+    <nav className="fixed top-0 z-50 w-full bg-white dark:bg-black backdrop-blur-md shadow-md dark:border-gray-600">
+      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between gap-4 px-4">
+        <a href="/" className="flex items-center gap-2 shrink-0 text-xl font-bold text-blue-600 dark:text-blue-500">
+          InfluencerAO
         </a>
 
         <div ref={searchRef} className="hidden md:flex relative max-w-xs flex-1">
