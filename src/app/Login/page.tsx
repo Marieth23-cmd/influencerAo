@@ -145,7 +145,7 @@ export default function Login() {
           </form>
 
           {/* Voltar */}
-          <div className="text-center mt-6">
+          <div className="text-center mt-6 flex gap-1">
             <Link
               href="/"
               className="text-sm text-slate-500  transition"
