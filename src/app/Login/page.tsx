@@ -148,9 +148,14 @@ export default function Login() {
           <div className="text-center mt-6">
             <Link
               href="/"
-              className="text-sm text-slate-500 hover:text-blue-600 transition"
+              className="text-sm text-slate-500  transition"
             >
-               Já tem conta? <span className="text-blue-600 cursor-pointer">Criar conta</span>
+               Não tem conta? 
+               <Link
+                href="/Registo"
+                className="text-blue-600 cursor-pointer">
+                  Criar conta
+                  </Link>
             </Link>
           </div>
 
